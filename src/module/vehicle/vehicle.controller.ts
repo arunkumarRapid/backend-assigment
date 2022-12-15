@@ -3,7 +3,6 @@ import {
   Logger,
   Get,
   Post,
-  Param,
   HttpException,
   Query,
   Body,
@@ -22,7 +21,7 @@ export class VehicleController {
   /**
    *
    * @description Call Api For Add Vehicle in Record
-   * @returns boolean Vehicle[]
+   * @returns Vehicle
    * @author Arun Kumar
    */
   @ApiOperation({
@@ -44,7 +43,7 @@ export class VehicleController {
   /**
    *
    * @description Call Api For Get Vehicle from Record depends query
-   * @returns boolean Vehicle[]
+   * @returns Vehicle[]
    * @author Arun Kumar
    */
   @ApiOperation({

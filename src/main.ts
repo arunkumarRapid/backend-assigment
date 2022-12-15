@@ -11,17 +11,13 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {});
-
-
   const configService = app.get<ConfigService>(ConfigService);
   app.setGlobalPrefix('/api/v1');
-  
   app.enableCors({
     origin: '*',
-    methods: 'GET',
+    methods: 'GET, POST',
     credentials: true,
   });
-  
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({

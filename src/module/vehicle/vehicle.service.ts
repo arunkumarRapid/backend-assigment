@@ -15,9 +15,9 @@ export class VehicleService {
 
   /**
    *
-   * @description Get Round Data From DB depends up roundContractId
-   * @return Round
-   * @param roundContractId
+   * @description Add vehicle details in DB
+   * @return Vehicle
+   * @body CreateVehicle
    * @author Arun Kumar
    */
   async createVehicle(createVehicle: CreateVehicle): Promise<Vehicle | any> {
@@ -31,8 +31,8 @@ export class VehicleService {
 
   /**
    *
-   * @description Get Rounds Data From DB depends up filters
-   * @return Round[]
+   * @description Get vehicles Data From DB depends up filters
+   * @return Vehicle[]
    * @author Arun Kumar
    */
   async vehicles(
